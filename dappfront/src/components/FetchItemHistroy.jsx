@@ -4,6 +4,8 @@ const FetchItemHistory = ({ contract }) => {
   const [productCode, setProductCode] = useState('');
   const [error, setError] = useState(null);
   const [itemHistory, setItemHistory] = useState(null);
+  const [fetchProductStatus,setFetchProductStauts]=useState(null);
+
 
   const handleFetchItemHistory = async () => {
     try {
@@ -12,7 +14,7 @@ const FetchItemHistory = ({ contract }) => {
         return;
       }
 
-      const result = await contract.fetchitemHistory(productCode); // Replace with your contract function
+      const result = await contract.fetchitemHistory(productCode); // 
 
       // Update item history state
       setItemHistory({
@@ -24,7 +26,7 @@ const FetchItemHistory = ({ contract }) => {
       setError(error.message || 'An error occurred while fetching item history.');
     }
   };
-
+  
   return (
     <div>
       {error && <p>Error: {error}</p>}
@@ -44,6 +46,8 @@ const FetchItemHistory = ({ contract }) => {
         </div>
       )}
     </div>
+
+    
   );
 };
 

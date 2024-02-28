@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.8;
 
-import "contracts/Manufacturer.sol";
-import "contracts/Distributor.sol";
-import "contracts/Consumer.sol";
-import "contracts/Retailer.sol";
+import "contracts/supplychain111/Manufacturer111.sol";
+import "contracts/supplychain111/Distributor111.sol";
+import "contracts/supplychain111/Consumer111.sol";
+import "contracts/supplychain111/Retailer111.sol";
 
 // Defining the contract
 
@@ -371,7 +371,7 @@ function buyItemByConsumer(uint _productCode, uint _price,uint _quantity) public
 }
 
 
- // Define a function 'fetchItemHistory' that fetches the data
+ // Define a function 'fetchItemHistory' that fetaches the data
     function fetchitemHistory(uint256 _productCode)
         public
         view

@@ -20,6 +20,7 @@ import SellItemByRetailer from './components/SellItemByRetailer'
 import BuyItemByConsumer from './components/BuyItemByConsumer'
 import FetchItem from './components/Fetchitem'
 import FetchItemHistory from './components/FetchItemHistroy'
+import FetchProductStatus from './components/FetchProductStatus'
 
 function App() {
   
@@ -40,7 +41,8 @@ function App() {
       }
     }
     const template=async()=>{
-      const contractAddress="0xAaE630e3a986f1932BE7079E8e897cA15f7e989D";
+     const contractAddress="0xAaE630e3a986f1932BE7079E8e897cA15f7e989D";
+     //const contractAddress=" 0x9904BfF082d228689B2e49338F831C4F8A9E18E8";
       const contractABI=abi.abi;
 
       const {ethereum}=window;
@@ -237,6 +239,7 @@ async function addRole(role, address){
     <BuyItemByConsumer contract={contractInstance}/>
     <FetchItem contract={contractInstance}/>
     <FetchItemHistory contract={contractInstance}/>
+    <FetchProductStatus contract={contractInstance}/>
     </>
   )
 }
